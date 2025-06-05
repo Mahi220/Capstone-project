@@ -1,0 +1,249 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPvTjOHcTjOMCl3M8hyRpIA",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Mahi220/Capstone-project/blob/main/Food%20ordering%20code%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Welcome to Python Pizza!\n",
+        "\n",
+        "Here's our menu:\n",
+        "\n",
+        "Pizza\n",
+        "Burger\n",
+        "Fries\n",
+        "Soda\n",
+        "Cake\n",
+        "Type the name of the item you want to order. Type 'exit' to finish.\n",
+        "\n",
+        "pizza You ordered pizza.\n",
+        "\n",
+        "fries You ordered fries.\n",
+        "\n",
+        "sandwich Sorry, we don't have sandwich. Try again.\n",
+        "\n",
+        "exit Thank you! Enjoy your meal."
+      ],
+      "metadata": {
+        "id": "vZim5mmfRAL4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "menu = [\"pizza\", \"burger\", \"fries\", \"soda\", \"cake\"]\n",
+        "\n",
+        "print(\"Welcome to Python Pizza!\\n\")\n",
+        "print(\"Here's our menu:\")\n",
+        "for item in menu:\n",
+        "    print(\"-\", item)\n",
+        "\n",
+        "# Let user order up to 5 times\n",
+        "for _ in range(5):\n",
+        "    order = input(\"\\nWhat would you like to order? (type 'exit' to finish): \").lower()\n",
+        "\n",
+        "    if order == \"exit\":\n",
+        "        print(\"Thank you! Enjoy your meal.\")\n",
+        "        break  # stop taking orders\n",
+        "\n",
+        "    if order not in menu:\n",
+        "        print(\"Sorry, we don't have that. Try again.\")\n",
+        "        continue  # skip to next input\n",
+        "\n",
+        "    print(\"You ordered\", order + \".\")\n",
+        "else:\n",
+        "    # This else runs if for loop finishes without break\n",
+        "    print(\"You've reached the maximum number of orders. Enjoy your meal!\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NM4x33KpRSmr",
+        "outputId": "8f1a22d0-954e-4e1e-af6e-ffef6c03e0c1"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to Python Pizza!\n",
+            "\n",
+            "Here's our menu:\n",
+            "- pizza\n",
+            "- burger\n",
+            "- fries\n",
+            "- soda\n",
+            "- cake\n",
+            "\n",
+            "What would you like to order? (type 'exit' to finish): pizza\n",
+            "You ordered pizza.\n",
+            "\n",
+            "What would you like to order? (type 'exit' to finish): burger\n",
+            "You ordered burger.\n",
+            "\n",
+            "What would you like to order? (type 'exit' to finish): coke\n",
+            "Sorry, we don't have that. Try again.\n",
+            "\n",
+            "What would you like to order? (type 'exit' to finish): cake\n",
+            "You ordered cake.\n",
+            "\n",
+            "What would you like to order? (type 'exit' to finish): chocolate\n",
+            "Sorry, we don't have that. Try again.\n",
+            "You've reached the maximum number of orders. Enjoy your meal!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "menu = [\"pizza\",\"burger\",\"fries\",\"soda\",\"cake\"]\n",
+        "\n",
+        "\n",
+        "print(\"Welcome to Python Pizza!\\n\")\n",
+        "print(\"here's our menu:\")\n",
+        "\n",
+        "for item in menu:\n",
+        "  print(\"-\",item)\n",
+        "\n",
+        "# Let user order upto 5 times\n",
+        "for _ in range(5):\n",
+        "  order = input(\"\\nWhat would you like to order?(type 'exit' to finish): \").lower()\n",
+        "\n",
+        "  if order == \"exit\":\n",
+        "    print(\"Thank you!, Enjoy your meal.\")\n",
+        "    break  # stop taking orders\n",
+        "\n",
+        "  if order not in menu:\n",
+        "    print(\"Sorry sir! we don't have that.Try again.\")\n",
+        "    continue # skip into next input\n",
+        "\n",
+        "  print(\"You ordered \", order+ \".\")\n",
+        "\n",
+        "else:\n",
+        "  # This loop runs if for loop finishes without break\n",
+        "  print(\"You've reached the maximum number of orders. Enjoy your meal!\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e7SoE40OSQZZ",
+        "outputId": "da801cc1-1130-477a-84a0-bc4c139e20f7"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to Python Pizza!\n",
+            "\n",
+            "here's our menu:\n",
+            "- pizza\n",
+            "- burger\n",
+            "- fries\n",
+            "- soda\n",
+            "- cake\n",
+            "\n",
+            "What would you like to order?(type 'exit' to finish): pizza\n",
+            "You ordered  pizza.\n",
+            "\n",
+            "What would you like to order?(type 'exit' to finish): exit\n",
+            "Thank you!, Enjoy your meal.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "menu =[\"upma\",\"dosa\",\"idli\"]\n",
+        "\n",
+        "print(\"Welcome to Namma Mess\")\n",
+        "print(\"Resto's menu\")\n",
+        "\n",
+        "for item in menu:\n",
+        "  print(\"-\",item)\n",
+        "\n",
+        "# let user order upto 3 times\n",
+        "\n",
+        "for _ in range(3):\n",
+        "  order = input(\"\\nyen bek swamy? (type 'beda bidi' to finish): \").lower()\n",
+        "\n",
+        "  if order == \"beda bidi\":\n",
+        "    print(\"sari haagidre hogbitt banni\")\n",
+        "    break  # stop taking orders\n",
+        "\n",
+        "  if order not in menu:\n",
+        "    print(\"en swamy ivag ond 5 nimisha munche kaali ayt nodi,bere enadru beka\")\n",
+        "    continue # skip to next input\n",
+        "\n",
+        "  print(\"Swamy nim\", order,\"Tagolli\"+\".\")\n",
+        "\n",
+        "else:\n",
+        "  # this loop runs if for loop finishes without break\n",
+        "  print(\"Neevu nimma daianandina garista aaykegalannu aaydukondiddiri.Dhanyavadagaluu!!!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UALuuWUpVT1t",
+        "outputId": "9006e348-c1a5-4973-8cb9-ebb07f382258"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to Namma Mess\n",
+            "Resto's menu\n",
+            "- upma\n",
+            "- dosa\n",
+            "- idli\n",
+            "\n",
+            "yen bek swamy? (type 'beda bidi' to finish): idli\n",
+            "Swamy nim idli Tagolli.\n",
+            "\n",
+            "yen bek swamy? (type 'beda bidi' to finish): dosa\n",
+            "Swamy nim dosa Tagolli.\n",
+            "\n",
+            "yen bek swamy? (type 'beda bidi' to finish): tea\n",
+            "en swamy ivag ond 5 nimisha munche kaali ayt nodi,bere enadru beka\n",
+            "Neevu nimma daianandina garista aaykegalannu aaydukondiddiri.Dhanyavadagaluu!!!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
